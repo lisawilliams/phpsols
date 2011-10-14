@@ -15,7 +15,15 @@ input[type="number"] {
   <p>
     <label for="select">Month:</label>
     <select name="month" id="month">
-      <option value=""></option>
+    <?php
+    $months = array('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',);
+    $thisMonth = date('n');
+    for ($i = 1; $i <= 12; $i++) { ?>
+      <option value="<?php echo $i; ?>"
+      <?php if ($i == $thisMonth) { echo ' selected'; } ?>>
+      <?php echo $months[$i-1];?>
+      </option>
+      <?php } ?>
     </select>
     <label for="day">Date:</label>
     <input name="day" type="number" required="required" id="day" max="31" min="1" maxlength="2">

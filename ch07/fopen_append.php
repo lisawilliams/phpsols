@@ -2,7 +2,7 @@
 // if the form has been submitted, process the input text
 if (isset($_POST['putContents'])) {
   // open the file in append mode
-  $file = fopen('C:/private/filetest_03.txt', 'a');
+  $file = fopen('/Users/lisawilliams/private/filetest_03.txt', 'a');
   // write the contents after inserting new line
   fwrite($file, PHP_EOL . $_POST['contents']);
   // close the file

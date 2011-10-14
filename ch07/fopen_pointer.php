@@ -2,13 +2,13 @@
 // if the form has been submitted, process the input text
 if (isset($_POST['putContents'])) {
   
-  $filename = 'C:/private/filetest_04.txt';
+  $filename = '/Users/lisawilliams/private/filetest_04.txt';
   // open a file for reading and writing
   $file = fopen($filename, 'r+');
   
   // the pointer is at the beginning, so existing content is overwritten
   // uncomment the next line to move the pointer to the end
-  // fseek($file, 0, SEEK_END);
+  fseek($file, 0, SEEK_END);
   fwrite($file, $_POST['contents']);
   
   // read the contents from the current position

@@ -1,0 +1,16 @@
+<?php
+
+require_once('../includes/connection.inc.php');
+// create database connection
+$conn = dbConnect('read');
+
+$sql = "SELECT session_name FROM sessions";
+$result = mysql_query($sql);
+
+echo "<select name='session_name'>";
+while ($row = mysql_fetch_array($result)) {
+    echo "<option value='" . $row['session_name'] . "'>" . $row['session_name'] . "</option>";
+}
+echo "</select>";
+
+?>

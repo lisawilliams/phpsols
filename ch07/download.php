@@ -2,7 +2,7 @@
 // define error page
 $error = 'http://localhost/phpsols/error.php';
 // define the path to the download folder
-$filepath = 'C:/xampp/htdocs/phpsols/images/';
+$filepath = '/Applications/MAMP/htdocs/phpsols/images/';
 
 $getfile = NULL;
 

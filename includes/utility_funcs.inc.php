@@ -1,6 +1,7 @@
 <?php
 function convertToParas($text) {
-  return preg_replace('/[\r\n]+/', '</p><p>', $text);
+  $text = trim($text);
+  return '<p>' . preg_replace('/[\r\n]+/', '</p><p>', $text) . '</p>';
 }
 function getFirst($text, $number=2) {
   // use regex to split into sentences

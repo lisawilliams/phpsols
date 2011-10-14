@@ -2,7 +2,7 @@
 // if the form has been submitted, process the input text
 if (isset($_POST['putContents'])) {
   // create a file ready for writing only if it doesn't already exist
-  $file = fopen('C:/private/filetest_04.txt', 'x');
+  $file = fopen('/Users/lisawilliams/private/filetest_04.txt', 'x');
   // write the contents
   fwrite($file, $_POST['contents']);
   // close the file

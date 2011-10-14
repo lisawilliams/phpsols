@@ -1,6 +1,6 @@
 <?php
 // store the pathname of the file
-$filename = 'C:/private/filetest_02.txt';
+$filename = '/Users/lisawilliams/private/filetest_02.txt';
 // open the file in read-only mode
 $file = fopen($filename, 'r');
 // read the file and store its contents

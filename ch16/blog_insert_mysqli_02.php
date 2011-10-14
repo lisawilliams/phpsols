@@ -52,19 +52,19 @@ if (isset($_POST['insert'])) {
 	} ?></textarea>
   </p>
   <p>
-    <label for="category">Categories:</label>
+    <label for="category">Sessions:</label>
     <select name="category[]" size="5" multiple id="category">
     <?php
 	// get categories
-	$getCats = 'SELECT cat_id, category FROM categories
-	            ORDER BY category';
-	$categories = $conn->query($getCats);
-	while ($row = $categories->fetch_assoc()) {
+	$getCats = 'SELECT talk_name, talk_id FROM talks
+	            ORDER BY talk_id';
+	$talks = $conn->query($getCats);
+	while ($row = $talk_name->fetch_assoc()) {
 	?>
-    <option value="<?php echo $row['cat_id']; ?>" <?php
-    if (isset($_POST['category']) && in_array($row['cat_id'], $_POST['category'])) {
+    <option value="<?php echo $row['talk_name']; ?>" <?php
+    if (isset($_POST['talks']) && in_array($row['talk_name'], $_POST['category'])) {
 	  echo 'selected';
-	} ?>><?php echo $row['category']; ?></option>
+	} ?>><?php echo $row['talk_name']; ?></option>
     <?php } ?>
     </select>
   </p>

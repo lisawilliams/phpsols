@@ -3,7 +3,7 @@ require_once('../includes/connection.inc.php');
 // connect to MySQL
 $conn = dbConnect('read');
 // prepare the SQL query
-$sql = 'SELECT * FROM images';
+$sql = 'SELECT * FROM talks';
 // submit the query and capture the result
 $result = $conn->query($sql) or die(mysqli_error());
 // find out how many records were retrieved
@@ -26,9 +26,9 @@ $numRows = $result->num_rows;
   </tr>
 <?php while ($row = $result->fetch_assoc()) { ?>
   <tr>
-    <td><?php echo $row['image_id']; ?></td>
-    <td><?php echo $row['filename']; ?></td>
-    <td><?php echo $row['caption']; ?></td>
+    <td><?php echo $row['talk_id']; ?></td>
+    <td><?php echo $row['talk_name']; ?></td>
+    <td><?php echo $row['talk_day']; ?></td>
   </tr>
 <?php } ?>
 </table>

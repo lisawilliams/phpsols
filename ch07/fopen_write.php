@@ -2,7 +2,7 @@
 // if the form has been submitted, process the input text
 if (isset($_POST['putContents'])) {
   // open the file in write-only mode
-  $file = fopen('C:/private/filetest_03.txt', 'w');
+  $file = fopen('/Users/lisawilliams/private/filetest_03.txt', 'w');
   // write the contents
   fwrite($file, $_POST['contents']);
   // close the file
