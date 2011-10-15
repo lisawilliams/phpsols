@@ -1,7 +1,7 @@
 <?php
 function dbConnect($usertype, $connectionType = 'mysqli') {
-  $host = 'internal-db.s81050.gridserver.com';
-  $db = 'db81050_phpsols';
+  $host = 'localhost';
+  $db = 'phpsols';
   // the password for this core user is factional 
   if ($usertype  == 'read') {
 	$user = 'db81050_psread';
