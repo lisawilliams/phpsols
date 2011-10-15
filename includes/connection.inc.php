@@ -1,12 +1,12 @@
 <?php
 function dbConnect($usertype, $connectionType = 'mysqli') {
   $host = 'localhost';
-  $db = 'phpsols';
+  $db = 'db81050_phpsols';
   if ($usertype  == 'read') {
-	$user = 'psread';
+	$user = 'db81050_psread';
 	$pwd = 'crankarm';
   } elseif ($usertype == 'write') {
-	$user = 'pswrite';
+	$user = 'db81050_pswrite';
 	$pwd = 'lavalamp';
   } else {
 	exit('Unrecognized connection type');

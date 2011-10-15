@@ -41,8 +41,7 @@ if (isset($_POST['insert'])) {
 	if (isset($image_id)) {
 	  $sql = 'INSERT INTO blog (image_id, title, article, created)
 			  VALUES(?, ?, ?, NOW())';
-	  $
-	  ->prepare($sql);
+	  $stmt->prepare($sql);
       $stmt->bind_param('iss', $image_id, $_POST['title'], $_POST['article']);
 	} else {
 	  // create SQL
