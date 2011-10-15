@@ -75,7 +75,7 @@ if (isset($_POST['insert'])) {
 
   // redirect if successful or display error
   if ($OK && !isset($imageError) && !isset($catError)) {
-	header('Location: http://localhost/phpsols/admin/blog_list_mysqli.php');
+	header('Location: http://theblackleatherbelt.com/phpsols/admin/blog_list_mysqli.php');
 	exit;
   } else {
 	$error = $stmt->error;
