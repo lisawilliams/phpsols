@@ -1,10 +1,20 @@
+<?php 
+$error = '';
+if (isset($_POST['login'])) {
+	session_start();
+	$username = trim($_POST['username']);
+	$password = trim($_POST['pwd']);
+	// location to redirect on success 
+	$redirect = 'http://localhost/phpsols/authenticate/menu_db.php';
+	require_once('../includes/authenticate_mysqli.inc.php');
+	}
+	?>
 <!DOCTYPE HTML>
 <html>
 <head>
 <meta charset="utf-8">
 <title>Login</title>
 </head>
-
 <body>
 <?php
 if ($error) {
